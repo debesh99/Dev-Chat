@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Dev ChatApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <link rel="stylesheet" href="css\style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icons\icons8-dev-50.png" alt="image">
+                <h3>Dev chat</h3>
+            </div>
+            <button class="btn" id="btn1" type="button" onclick="toggleHide()">
+                <img src="icons\ham.png" alt="button">
+            </button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h4>
+                        <h4 class="users-count">3</h4>
+                </div>
+                <div class="users-list">
+                    <ul>
+                        <!-- <li>Jarvis</li>
+                        <li>Ultron</li>
+                        <li>Veronica</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    <!-- <div class="user-join">
+                        <p><b>Jarvis</b> joined the chat</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Jarvis</h5>
+                        <p>Hello Veronica</p>
+                    </div>
+
+                    <div class="message incoming">
+                        <h5>Ultron</h5>
+                        <p>Hey there Veronica</p>
+                    </div>
+
+                    <div class="message outgoing">
+                        <h5>Veronica</h5>
+                        <p>Welcome all, Hope you all are well.</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Veronica</h5>
+                        <p>We will meet tomorrow afternoon</p>
+                    </div> -->
+
+
+                </div>
+                <div class="user-input">
+                    <input id="users-msg" type="text" name="textbox" placeholder="Type your message here...">
+                    <button id="users-send" type="button">Send</button>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/js/script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+
+
+
+
+</body>
+
+</html>

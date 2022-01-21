@@ -1,0 +1,218 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  overflow: hidden;
+  width: 80%;
+  left: 10%;
+  top: 2%;
+  position: absolute;
+  border-radius: 2vh;
+}
+
+main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #00A0F7;
+  padding: 0.5%;
+}
+
+main header button {
+  border-radius: 1vh;
+  border-color: black;
+  background-color: transparent;
+  display: none;
+}
+
+main header button img {
+  height: 4vh;
+}
+
+main .container {
+  background-color: #80878D;
+  padding: 2.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .container .users-window {
+  background-color: #403F40;
+  color: white;
+  width: 27%;
+  padding: 1%;
+  border-radius: 2vh;
+}
+
+main .container .users-window .users-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .container .users-window .users-head h4 {
+  border-radius: 50px;
+  background-color: rgba(228, 28, 28, 0.541);
+  width: 10%;
+  text-align: center;
+}
+
+main .container .users-window .users-list li {
+  list-style: none;
+  margin: 5% 0%;
+  font-size: 1.1rem;
+}
+
+main .container .chat-window {
+  margin-left: 5%;
+  background-color: #403F40;
+  color: white;
+  width: 75%;
+  border-radius: 2vh;
+}
+
+main .container .chat-window .chats {
+  height: 65vh;
+  padding: 2%;
+  overflow-y: auto;
+}
+
+main .container .chat-window .chats .user-join {
+  color: #403F40;
+  background-color: #eecd91;
+  border-radius: 2vh;
+  text-align: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+main .container .chat-window .chats .message {
+  color: black;
+  background-color: white;
+  margin-bottom: 3%;
+  padding: 3%;
+  max-width: 50%;
+  overflow: hidden;
+  border-radius: 1vh 3vh;
+}
+
+main .container .chat-window .chats .outgoing {
+  margin-left: auto;
+  background-color: #00A0F7;
+  color: white;
+}
+
+main .container .chat-window .user-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 2%;
+}
+
+main .container .chat-window .user-input input {
+  background-color: white;
+  padding: 2%;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 1vh 0vh 0vh 1vh;
+}
+
+main .container .chat-window .user-input button {
+  padding: 0% 5%;
+  outline: none;
+  border: none;
+  background-color: #00A0F7;
+  border-radius: 0vh 1vh 1vh 0vh;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0%;
+  }
+  main header button {
+    display: block;
+  }
+  main .container {
+    position: relative;
+  }
+  main .container .users-window {
+    position: absolute;
+    width: 96%;
+    top: 0;
+    border-radius: 0 0 1vh 1vh;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    z-index: 1;
+    -webkit-box-shadow: 0 20px 20px -15px black;
+            box-shadow: 0 20px 20px -15px black;
+    margin-bottom: 0;
+    display: none;
+  }
+  main .container .chat-window {
+    width: 100%;
+    margin: 0%;
+    border-radius: 0%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

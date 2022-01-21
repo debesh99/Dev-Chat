@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+     ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+$var-bg-pr:#00A0F7;
+$Var-bg-sc: #403F40;
+$var-bg-tr:#80878D;
+$var-bg-ch: #106b18af;
+@mixin flexing($jc, $fd, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+main {
+    // border: 2px solid black;
+    overflow: hidden;
+    width: 80%;
+    left: 10%;
+    top: 2%;
+    position: absolute;
+    border-radius: 2vh;
+    header {
+        @include flexing(space-between, row, center);
+        // border: 2px solid rgb(238, 20, 20);
+        background-color: $var-bg-pr;
+        padding: 0.5%;
+        button {
+            border-radius: 1vh;
+            border-color: black;
+            background-color: transparent;
+            img {
+                height: 4vh;
+            }
+            display: none;
+        }
+    }
+    .container {
+        // border: 2px solid rgb(238, 20, 20);
+        background-color: $var-bg-tr;
+        padding: 2.3%;
+        @include flexing(flex-start, row, stretch);
+        .users-window {
+            // border: 2px solid greenyellow;
+            background-color: $Var-bg-sc;
+            color: white;
+            width: 27%;
+            padding: 1%;
+            border-radius: 2vh;
+            // margin: 1%;
+            .users-head {
+                @include flexing(space-between, row, center);
+                flex-wrap: wrap;
+                h4 {
+                    border-radius: 50px;
+                    background-color: rgba(228, 28, 28, 0.541);
+                    width: 10%;
+                    text-align: center;
+                }
+            }
+            .users-list {
+                li {
+                    list-style: none;
+                    margin: 5% 0%;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .chat-window {
+            // border: 2px solid rgb(238, 20, 20);
+            margin-left: 5%;
+            background-color: $Var-bg-sc;
+            color: white;
+            width: 75%;
+            // padding: 2%;
+            border-radius: 2vh;
+            .chats {
+                // border: 2px solid rgb(238, 20, 20);
+                height: 65vh;
+                padding: 2%;
+                overflow-y: auto;
+                .user-join {
+                    color: $Var-bg-sc;
+                    background-color: rgb(238, 205, 145);
+                    border-radius: 2vh;
+                    text-align: center;
+                    width: max-content;
+                    padding: 2%;
+                    margin: 0 auto;
+                    margin-bottom: 5%;
+                }
+                .message {
+                    color: black;
+                    background-color: white;
+                    margin-bottom: 3%;
+                    padding: 3%;
+                    // width: max-content;
+                    max-width: 50%;
+                    overflow: hidden;
+                    border-radius: 1vh 3vh;
+                }
+                .outgoing {
+                    margin-left: auto;
+                    background-color: $var-bg-pr;
+                    color: white;
+                }
+            }
+            .user-input {
+                @include flexing(space-between, row, stretch);
+                margin: 2%;
+                input {
+                    background-color: white;
+                    padding: 2%;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    border-radius: 1vh 0vh 0vh 1vh;
+                }
+                button {
+                    padding: 0% 5%;
+                    outline: none;
+                    border: none;
+                    background-color: $var-bg-pr;
+                    border-radius: 0vh 1vh 1vh 0vh;
+                }
+            }
+        }
+    }
+    @media screen and (max-width :700px) {
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0%;
+        header {
+            button {
+                display: block;
+            }
+        }
+        .container {
+            position: relative;
+            .users-window {
+                position: absolute;
+                width: 96%;
+                top: 0;
+                border-radius: 0 0 1vh 1vh;
+                height: max-content;
+                z-index: 1;
+                box-shadow: 0 20px 20px -15px black;
+                margin-bottom: 0;
+                display: none;
+            }
+            .chat-window {
+                width: 100%;
+                margin: 0%;
+                border-radius: 0%;
+            }
+        }
+    }
+}
